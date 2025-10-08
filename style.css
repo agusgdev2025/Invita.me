@@ -1,0 +1,375 @@
+﻿/*Fuentes*/
+.roboto-<uniquifier > {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    /*font-weight: 400;*/
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    color: white;
+}
+
+body {
+    margin: 0px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    background-image: url("img/bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: none;
+}
+
+p {
+    cursor: default;
+    padding: 10px 0;
+}
+
+.content {
+    padding: 2vw;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+    .content p {
+        width: 60%;
+        font-size: 1.2rem;
+    }
+
+
+
+.content_2 {
+    padding: 2vw;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
+    .content_2 p {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .content_2 a {
+        background-color: rgb(41, 162, 41, 0);
+        border-radius: 5px;
+        font-family: "Roboto", sans-serif;
+        width: 15vw;
+        height: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: 2px solid rgb(225,255,255);
+        margin-top: 2vh;
+    }
+
+    .content_2 a:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+.menutop {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2vw;
+}
+
+.menutop a{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 0 2vw;
+    z-index: 100;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    width: 15vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.menutop a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.create a{
+    background-color: rgb(41, 162, 41);
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    width: 15vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.create a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+.menu {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    /*margin-bottom: 20vh;*/
+}
+    .menu ul, .menu li, .menu a {
+        list-style: none;
+        text-decoration: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        /*color: #000000;*/
+        
+    }
+    .menu a {
+        background-color: rgb(255, 255, 255, 0.1);
+        border-radius: 5px;
+        letter-spacing: 0.1rem;
+        font-family: "Roboto", sans-serif;
+        width: 16vw;
+        height: 12vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu a:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+       
+  
+.top {
+    /*background-color: #B79B7D;*/
+    text-align: center;
+    padding: 10px 0;
+    font-size-adjust: 0.3;
+    font-weight: bold;
+    letter-spacing: 2px;
+    top: 0;
+    width: 100%;
+    color: white;
+    font-family: "Cookie", cursive;
+    display: flex;
+    justify-content:center;
+    line-height:7rem;
+    margin-top: 8vh;
+}
+
+    .top h1{
+        width:fit-content;
+        cursor:pointer;
+    }
+    .top h1:hover {
+        color: #F5E9DA;
+        transition: all 0.3s ease;
+    }
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    backdrop-filter: blur(12px); /* desenfoca el fondo */
+    -webkit-backdrop-filter: blur(12px); /* soporte Safari */
+}
+
+
+
+
+/*
+
+
+
+    MOVILES
+
+
+
+*/
+
+
+
+
+@media (max-width: 790px) {
+    html {
+        font-size: 110%; /* aumenta toda la escala */
+        
+    }
+    *{
+        color: white;
+    }
+    .create a {
+        background-color: rgb(41, 162, 41);
+        border-radius: 5px;
+        font-family: "Roboto", sans-serif;
+        width: 30vw;
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .menu {
+        margin-top: 2vh;
+        display: none;
+        justify-content: center;
+        margin-bottom: 20vh;
+    }
+
+        .menu ul, .menu li, .menu a {
+            list-style: none;
+            text-decoration: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            /*color: #000000;*/
+            /*flex-direction: column;*/
+        }
+
+        .menu a {
+            background-color: rgb(255, 255, 255, 0.1);
+            border-radius: 5px;
+            letter-spacing: 0.1rem;
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    .content {
+        padding: 2vw;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+        .content p {
+            width: 90%;
+            font-size: 1.2rem;
+        }
+
+    .top {
+        /*background-color: #B79B7D;*/
+        text-align: center;
+        padding: 10px 0;
+        font-size-adjust: 0.3;
+        font-weight: bold;
+        letter-spacing: 2px;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-family: "Cookie", cursive;
+        display: flex;
+        justify-content: center;
+        line-height: 7rem;
+        margin-top: 14vh;
+    }
+
+    .content_2 {
+        padding: 2vw;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5vh;
+    }
+
+        .content_2 p {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
+        .content_2 a {
+            background-color: rgb(41, 162, 41, 0);
+            border-radius: 5px;
+            font-family: "Roboto", sans-serif;
+            width: 30vw;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 2px solid rgb(225,255,255);
+        }
+
+    header {
+        background-color: white;
+        color: black;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        padding: 1vh 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    header a {
+        text-decoration: none;
+        color: black;
+    }
+        header li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height:5vh;
+        }
+        header ul {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            
+        }
+}

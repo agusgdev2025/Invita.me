@@ -1,0 +1,152 @@
+﻿.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+}
+
+._back {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1); /* fondo semitransparente */
+    backdrop-filter: blur(12px); /* desenfoca el fondo */
+    -webkit-backdrop-filter: blur(12px); /* soporte Safari */
+}
+.material-symbols-outlined:hover {
+    color: #ff9800;
+}
+
+/*Fuentes*/
+.roboto-<uniquifier > {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    /*font-weight: 400;*/
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    background-image: url("img/bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Contenedor exterior que permite el scroll */
+.invitation-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto; /* scroll vertical */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*background: #111;*/ /* fondo general */
+    padding: 2rem 0;
+}
+
+/* Contenedor principal 9:16 */
+.invitation-container {
+    width: 100%;
+    max-width: 400px; /* ajustá según tu diseño */
+    aspect-ratio: 9 / 48; /* mantiene proporción */
+    display: flex;
+    flex-direction: column;
+    /*border-radius: 24px;*/
+    overflow: hidden;
+    background: #fff; /* fondo de la invitación */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+/* Secciones internas */
+.header {
+    flex: 1;
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    display: flex;
+    flex-direction: column; /* para apilar el h1 arriba del h2 */
+    justify-content: center; /* centra verticalmente */
+    align-items: center; /* centra horizontalmente */
+    text-align: center; /* centra el texto */
+    height: 100%; /* asegura ocupar todo el alto disponible */
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    color: white; /* color del texto */
+    padding: 1rem;
+}
+    .header h1 {
+        font-family: "Cookie", cursive;
+        font-size: 4.5rem;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
+    .header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+.body {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    overflow-y: auto; /* si el contenido del body también necesita scroll */
+    color: #000;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    /* 1. Habilita el scroll horizontal */
+    overflow-x: auto;
+    /* 2. Activa el "scroll snap" en el eje X y lo hace obligatorio */
+    scroll-snap-type: x mandatory;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+    .images img {
+        aspect-ratio: initial;
+        width: 100%;
+        margin-right: 2vw;
+        scroll-snap-align: center;
+    }
+
+.details {
+    display: flex;
+    flex-direction: column; /* para apilar el h1 arriba del h2 */
+    justify-content: center; /* centra verticalmente */
+    align-items: center; /* centra horizontalmente */
+    text-align: center; /* centra el texto */
+    padding: 1rem;
+    color:#000;
+}
+
+.footer {
+    flex: 1;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
