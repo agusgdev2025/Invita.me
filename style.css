@@ -356,7 +356,18 @@ p {
         display: flex;
         justify-content: center;
         list-style: none;
+        align-items: center;
+        padding: 2vw;
     }
+        header h1 {
+            color: black;
+            text-align: center;
+            font-size-adjust: 0.1;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-family: "Cookie", cursive;
+            
+        }
     header a {
         text-decoration: none;
         color: black;
@@ -372,6 +383,10 @@ p {
             display: flex;
             flex-direction: row;
             width: 100%;
-            
+            font-size-adjust: 0.3;
         }
+
+    .top h1{
+        display: none;
+    }
 }

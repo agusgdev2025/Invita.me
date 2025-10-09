@@ -10,9 +10,9 @@
     left: 20px;
     z-index: 100;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.1); /* fondo semitransparente */
-    backdrop-filter: blur(12px); /* desenfoca el fondo */
-    -webkit-backdrop-filter: blur(12px); /* soporte Safari */
+    /*background: rgba(0, 0, 0, 0.1);*/ /* fondo semitransparente */
+    /*backdrop-filter: blur(12px);*/ /* desenfoca el fondo */
+    /*-webkit-backdrop-filter: blur(12px);*/ /* soporte Safari */
     color: #000;
 }
 .material-symbols-outlined:hover {
