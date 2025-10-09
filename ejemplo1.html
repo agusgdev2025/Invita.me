@@ -18,24 +18,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--FUENTE CURSIVA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--FUENTE BUSINESS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Text:ital@0;1&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <a class="_back" href="index.html"><span class="material-symbols-outlined">arrow_back</span></a>
+        <a class="_back" href="ejemplos.html"><span class="material-symbols-outlined">arrow_back</span></a>
     </header>
 
     <div class="invitation-wrapper">
         <div class="invitation-container">
             <section class="header">
-                <h1>Mi Evento</h1>
+                <h1>Mi evento</h1>
                 <h2>Invitación para mi evento.</h2>
                 <h3>00/00/00 | 00hs</h3>
             </section>
             <section class="body">
                 <div class=" images">
+                    <img src="https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto de Sarah y Marc 2">
                     <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto de Sarah y Marc 1">
                     <img src="https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto de Sarah y Marc 2">
-                    <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto de Sarah y Marc 1">       
+
                     <!--AGREGAR HASTA 10-->
                 </div>
                 <div class="details">
@@ -50,7 +60,67 @@
                 </div>
             </section>
             <section class="footer">
+                <div class="countdown-container">
+                    <h1>Faltan:</h1>
+                    <div id="countdown-display">
+                        <span id="days">00</span>d
+                        <span id="hours">00</span>h
+                        <span id="minutes">00</span>m
+                        <span id="seconds">00</span>s
+                    </div>
+                    <p id="countdown-message"></p>
+                </div>
+                <script src="scrCountdown.js"></script>
 
+                <form class="confirmation-form" id="confirmationForm" style="margin-top: 2em;">
+                    <h2>Confirmar asistencia</h2>
+                    <div>
+                        <label for="nombreApellido">Nombre y Apellido:</label>
+                        <input type="text" id="nombreApellido" name="nombreApellido" required />
+                    </div>
+                    <div>
+                        <label for="telefono">Número de Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9+ ]{7,}" />
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <br />
+                    <button type="submit">Confirmar</button>
+                </form>
+                <script>
+                    //SUBIR FORMULARIO
+                    document.getElementById('confirmationForm').addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        const nombre = document.getElementById('nombreApellido').value;
+                        const telefono = document.getElementById('telefono').value;
+                        const email = document.getElementById('email').value;
+
+                        const mensaje =
+                            "Verifica los datos:\n" +
+                            "Nombre y Apellido: " + nombre + "\n" +
+                            "Teléfono: " + telefono + "\n" +
+                            "Email: " + email +
+                            "\n\n¿Desea confirmar el envío?";
+
+                        if (confirm(mensaje)) {
+                            // ✅ Usuario confirmó
+                            alert("Datos confirmados. ¡Gracias!");
+                            e.target.submit(); // envía el formulario
+                            document.getElementById('confirmationForm').reset();
+                            window.scrollTo(0, 0);
+                        } else {
+                            // ❌ Usuario canceló
+                            alert("Envío cancelado.");
+                        }
+                    });
+
+
+                </script>
+
+                <p>Creado con <b>Invita.me!</b></p>
             </section>
         </div>
     </div>

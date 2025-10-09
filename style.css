@@ -29,6 +29,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 header {
@@ -170,10 +171,11 @@ p {
         justify-content: center;
         align-items: center;
     }
-    .menu a:hover {
-        background-color: rgb(255, 255, 255);
-        color: black;
-    }
+        .menu a:hover {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            transform: scale(1.05);
+        }
        
   
 .top {
@@ -195,12 +197,12 @@ p {
 
     .top h1{
         width:fit-content;
-        cursor:pointer;
+        /*cursor:pointer;*/
     }
-    .top h1:hover {
+/*    .top h1:hover {
         color: #F5E9DA;
         transition: all 0.3s ease;
-    }
+    }*/
 
 .bottom {
     position: fixed;

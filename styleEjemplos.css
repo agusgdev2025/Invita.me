@@ -1,0 +1,108 @@
+﻿.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+}
+
+._back {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1); /* fondo semitransparente */
+    backdrop-filter: blur(12px); /* desenfoca el fondo */
+    -webkit-backdrop-filter: blur(12px); /* soporte Safari */
+    color: #000;
+}
+.material-symbols-outlined:hover {
+    color: #ff9800;
+}
+
+/*Fuentes*/
+.roboto-<uniquifier > {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+
+
+* {
+    /*margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    /*margin: 0px;*/
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    background-image: url("img/bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5vw;
+}
+
+.ejemplos-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    padding: 5vw;
+    background: rgba(0, 0, 0, 0.1); /* fondo semitransparente */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+img {
+    width: 10vw;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media (max-width: 600px) {
+    .ejemplos-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.1); /* fondo semitransparente */
+    }
+    img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+}
