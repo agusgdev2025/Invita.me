@@ -254,10 +254,10 @@ p {
     .example_image_txt p {
         margin-top: 1vh;
         font-size: 1.5rem;
-        
         width: 100%;
         text-align: center;
         color: black;
+    }
         /*
 
 
