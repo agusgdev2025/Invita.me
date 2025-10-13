@@ -90,6 +90,7 @@ body {
     align-items: flex-start;
     /*background: #111;*/ /* fondo general */
     padding: 2rem 0;
+    scroll-behavior: smooth; /* para un desplazamiento suave */
 }
 
 /* Contenedor principal 9:16 */
@@ -122,6 +123,7 @@ body {
     /*background: linear-gradient(135deg, #ff8a00, #e52e71);*/
     color: rgb(149, 134, 119); /* color del texto */
     padding: 1rem;
+    animation: FadeBackground 15s ease-in-out infinite alternate;
 }
     .header h1 {
         font-family: "Monsieur La Doulaise", cursive;
@@ -166,6 +168,7 @@ body {
     /* 2. Activa el "scroll snap" en el eje X y lo hace obligatorio */
     scroll-snap-type: x mandatory;
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    scroll-behavior: smooth; /* para un desplazamiento suave */
 }
     .images img {
         aspect-ratio: initial;
@@ -188,7 +191,7 @@ body {
 
 .footer {
     flex: 1;
-    background: rgba(0,0,0,0.85);
+    background-color: rgb(201 161 166);
     color: #fff;
     display: flex;
     align-items: center;
@@ -204,13 +207,18 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    /*flex: 1;*/
     margin-top: 2rem;
 }
+    .countdown-container h1 {
+        font-family: "Monsieur La Doulaise", cursive;
+        font-size: 2.5em;
+        font-weight: 100;
+    }
 
 #countdown-display span {
     font-size: 2em;
-    font-weight: bold;
+    /*font-weight: bold;*/
     margin: 0 5px;
 }
 
@@ -218,6 +226,7 @@ body {
     font-size: 1.2em;
     color: #e74c3c;
     margin-top: 20px;
+    
 }
 
 .confirmation-form {
@@ -228,7 +237,7 @@ body {
     padding: 2em;
     max-width: 400px;
     margin: 0 auto;
-    flex: 1;
+    /*flex: 1;*/
     font-family: 'Roboto', sans-serif;
     margin-bottom: 2rem;
 }
@@ -275,7 +284,7 @@ body {
     .confirmation-form button[type="submit"] {
         width: 100%;
         padding: 0.8em;
-        background-color: rgb(149, 134, 119);
+        background-color: rgb(187, 142, 147);
         color: #fff;
         border: none;
         border-radius: 6px;
@@ -286,7 +295,7 @@ body {
     }
 
         .confirmation-form button[type="submit"]:hover {
-            background-color: rgb(101, 79, 57);
+            background-color: rgb(125, 94, 98);
         }
 
 
@@ -304,6 +313,18 @@ body {
 
 */
 
+@keyframes FadeBackground {
+    0% {
+        background-size: 100% 100%;
+        opacity: 0.6;
+        word-space-transform: scale(1);
+    }
+    100% {
+        background-size: 110% 100%;
+        opacity: 1;
+        word-space-transform: scale(1.05);
+    }
+}
 
 
 @keyframes FadeTitle {
@@ -329,8 +350,52 @@ body {
 }
 
 
+@keyframes FadeTitlePhone {
+    0% {
+        font-size: 3rem;
+        opacity: 0.6;
+    }
+    90% {
+        font-size: 3.45rem;
+        opacity: 0.8;
+    }
+    100% {
+        font-size: 3.5rem;
+        opacity: 1;
+    }
+}
+
+
+@keyframes FadeinPhone {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 
 
 
 
+@media (max-width: 450px) {
+
+    .header h1 {
+        font-size: 3.5rem;
+        animation: FadeTitlePhone 3s ease-in-out;
+    }
+    .header h2 {
+        font-size: 1.1rem;
+        animation: FadeinPhone 2s ease-in-out;
+    }
+    .header h3 {
+        font-size: 0.9rem;
+        animation: FadeinPhone 2s ease-in-out;
+    }
+    .images img {
+        width: 80vw;
+        margin-right: 4vw;
+    }
+}

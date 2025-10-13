@@ -40,6 +40,7 @@
                 <h2>Invitación para mi evento.</h2>
                 <h3>00/00/00 | 00hs</h3>
             </section>
+            <hr />
             <section class="body">
                 <div class=" images">
                     <img src="https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto de Sarah y Marc 2">
@@ -52,13 +53,14 @@
                     <p><b>Detalles del evento:</b></p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <br />
-                    <p><b>Dirección:</b></p> 
+                    <p><b>Dirección:</b></p>
                     <p>Calle Falsa 123, Ciudad, País</p>
                     <br />
                     <p><b>Contacto:</b></p>
                     <p>+123 456 7890</p>
                 </div>
             </section>
+            
             <section class="footer">
                 <div class="countdown-container">
                     <h1>Faltan:</h1>
@@ -72,21 +74,25 @@
                 </div>
                 <script src="scrCountdown.js"></script>
 
-                <form class="confirmation-form" id="confirmationForm" style="margin-top: 2em;">
+                <form action="sendForm.php" method="post" class="confirmation-form" id="confirmationForm" style="margin-top: 2em;">
                     <h2>Confirmar asistencia</h2>
-                    <div>
-                        <label for="nombreApellido">Nombre y Apellido:</label>
-                        <input type="text" id="nombreApellido" name="nombreApellido" required />
-                    </div>
-                    <div>
-                        <label for="telefono">Número de Teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9+ ]{7,}" />
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <br />
+                    <!--           <div>
+                <label for="nombreApellido">Nombre y Apellido:</label>
+                <input type="text" id="nombreApellido" name="nombre" required />
+            </div>
+            <div>
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9+ ]{7,}" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label for="email">Asistentes:</label>
+                <input type="text" id="email" name="people" required />
+            </div>
+            <br />-->
                     <button type="submit">Confirmar</button>
                 </form>
                 <script>
@@ -98,29 +104,15 @@
                         const telefono = document.getElementById('telefono').value;
                         const email = document.getElementById('email').value;
 
-                        const mensaje =
-                            "Verifica los datos:\n" +
-                            "Nombre y Apellido: " + nombre + "\n" +
-                            "Teléfono: " + telefono + "\n" +
-                            "Email: " + email +
-                            "\n\n¿Desea confirmar el envío?";
-
-                        if (confirm(mensaje)) {
-                            // ✅ Usuario confirmó
-                            alert("Datos confirmados. ¡Gracias!");
-                            e.target.submit(); // envía el formulario
-                            document.getElementById('confirmationForm').reset();
-                            window.scrollTo(0, 0);
-                        } else {
-                            // ❌ Usuario canceló
-                            alert("Envío cancelado.");
-                        }
+                        e.target.submit(); // envía el formulario
+                        document.getElementById('confirmationForm').reset();
+                        window.scrollTo(0, 0);
                     });
 
 
                 </script>
 
-                <p>Creado con <b>Invita.me!</b></p>
+                <p>Creado con <b>Invita.me!</b></p><br />
             </section>
         </div>
     </div>
