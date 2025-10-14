@@ -61,7 +61,14 @@
 
 
 
-
+a {
+    text-decoration: none;
+    color: white;
+}
+    a:hover {
+        transition: ease-in-out 0.3s;
+        color: #ff9800;
+    }
 * {
     margin: 0;
     padding: 0;
@@ -132,7 +139,7 @@ body {
         text-align: center;
         padding: 1rem;
         margin-top: 0.5rem;
-        animation: FadeTitle 2s ease-in-out;
+        animation: FadeTitle 3s ease-in-out;
     }
     .header h2 {
         font-size: 1.3rem;
@@ -148,7 +155,15 @@ body {
         font-weight: 300;
         animation: Fadein 2s ease-in-out;
     }
-
+.header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient( circle, rgba(0, 0, 0, 0) 90%, /* centro transparente */
+    rgb(196, 111, 122, 0.5) 100% /* bordes oscuros */
+    );
+    pointer-events: none;
+}
 .body {
     flex: 1;
     background: rgba(255,255,255,0.1);
@@ -176,7 +191,7 @@ body {
         margin-right: 2vw;
         scroll-snap-align: center;
     }
-
+    
 .details {
     display: flex;
     flex-direction: column; /* para apilar el h1 arriba del h2 */
@@ -317,12 +332,11 @@ body {
     0% {
         background-size: 100% 100%;
         opacity: 0.6;
-        word-space-transform: scale(1);
+        
     }
     100% {
-        background-size: 110% 100%;
+        background-size: 115% 105%;
         opacity: 1;
-        word-space-transform: scale(1.05);
     }
 }
 
@@ -393,9 +407,5 @@ body {
     .header h3 {
         font-size: 0.9rem;
         animation: FadeinPhone 2s ease-in-out;
-    }
-    .images img {
-        width: 80vw;
-        margin-right: 4vw;
     }
 }
