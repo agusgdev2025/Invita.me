@@ -394,18 +394,37 @@ body {
 
 
 
-@media (max-width: 450px) {
+@media (max-width: 790px) {
 
     .header h1 {
         font-size: 3.5rem;
         animation: FadeinPhone 3s ease-in-out;
     }
+
     .header h2 {
         font-size: 1.1rem;
         animation: FadeinPhone 2s ease-in-out;
     }
+
     .header h3 {
         font-size: 0.9rem;
         animation: FadeinPhone 2s ease-in-out;
+    }
+
+    .header {
+        flex: 1;
+        background-image: url("img/Fondo1.jpg");
+        background-repeat: no-repeat;
+        background-size: 110% 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column; /* para apilar el h1 arriba del h2 */
+        justify-content: center; /* centra verticalmente */
+        align-items: center; /* centra horizontalmente */
+        text-align: center; /* centra el texto */
+        height: 100%; /* asegura ocupar todo el alto disponible */
+        /*background: linear-gradient(135deg, #ff8a00, #e52e71);*/
+        color: rgb(149, 134, 119); /* color del texto */
+        padding: 1rem;
     }
 }
