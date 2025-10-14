@@ -1,0 +1,430 @@
+﻿.material-symbols-outlined { /* x */
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+}
+
+
+.material-symbols-outlined {    /* upward arrow */
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+
+._back {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 10px;
+    /*background: rgba(0, 0, 0, 0.1);*/ /* fondo semitransparente */
+    /*backdrop-filter: blur(12px);*/ /* desenfoca el fondo */
+    /*-webkit-backdrop-filter: blur(12px);*/ /* soporte Safari */
+    color: #000;
+}
+.material-symbols-outlined:hover {
+    color: #ff9800;
+}
+
+/*Fuentes*/
+.roboto-<uniquifier > {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    /*font-weight: 400;*/
+    font-style: normal;
+}
+
+.monsieur-la-doulaise-regular {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.dm-serif-text-regular {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+    a:hover {
+        transition: ease-in-out 0.3s;
+        color: #ff9800;
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    background-image: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Contenedor exterior que permite el scroll */
+.invitation-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto; /* scroll vertical */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*background: #111;*/ /* fondo general */
+    padding: 2rem 0;
+    scroll-behavior: smooth; /* para un desplazamiento suave */
+}
+
+/* Contenedor principal 9:16 */
+.invitation-container {
+    width: 100%;
+    max-width: 400px; /* ajustá según tu diseño */
+    aspect-ratio: 9 / 48; /* mantiene proporción */
+    display: flex;
+    flex-direction: column;
+    /*border-radius: 24px;*/
+    overflow: hidden;
+    background: #fff; /* fondo de la invitación */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+/* Secciones internas */
+.header {
+    flex: 1;
+    background-image: url("../img/bg_aqua.jpg");
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* para apilar el h1 arriba del h2 */
+    justify-content: center; /* centra verticalmente */
+    align-items: center; /* centra horizontalmente */
+    text-align: center; /* centra el texto */
+    height: 100%; /* asegura ocupar todo el alto disponible */
+    /*background: linear-gradient(135deg, #ff8a00, #e52e71);*/
+    color: rgb(16, 16, 16); /* color del texto */
+    padding: 1rem;
+    animation: FadeBackground 15s ease-in-out infinite alternate;
+}
+    .header h1 {
+        font-family: "Monsieur La Doulaise", cursive;
+        font-size: 4.5rem;
+        font-weight: 100;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        animation: FadeTitle 3s ease-in-out;
+    }
+    .header h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-family: "DM Serif Text", serif;
+        animation: Fadein 2s ease-in-out;
+        font-weight: 100;
+    }
+    .header h3 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        animation: Fadein 2s ease-in-out;
+    }
+.header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient( circle, rgba(0, 0, 0, 0) 90%, /* centro transparente */
+    rgb(16, 16, 16, 0.5) 100% /* bordes oscuros */
+    );
+    pointer-events: none;
+}
+.body {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    overflow-y: auto; /* si el contenido del body también necesita scroll */
+    color: #000;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    /* 1. Habilita el scroll horizontal */
+    overflow-x: auto;
+    /* 2. Activa el "scroll snap" en el eje X y lo hace obligatorio */
+    scroll-snap-type: x mandatory;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    scroll-behavior: smooth; /* para un desplazamiento suave */
+}
+    .images img {
+        aspect-ratio: initial;
+        width: 100%;
+        margin-right: 2vw;
+        scroll-snap-align: center;
+    }
+    
+.details {
+    display: flex;
+    flex-direction: column; /* para apilar el h1 arriba del h2 */
+    justify-content: center; /* centra verticalmente */
+    align-items: center; /* centra horizontalmente */
+    text-align: center; /* centra el texto */
+    padding: 1rem;
+    color: rgb(119, 122, 149);
+    font-family: "DM Serif Text", serif;
+    font-weight: 100;
+}
+
+.footer {
+    flex: 1;
+    background-color: rgb(161 188 201);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.countdown-container {
+    text-align: center;
+    /*background-color: #fff;*/
+    background-color: rgb(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*flex: 1;*/
+    margin-top: 2rem;
+}
+    .countdown-container h1 {
+        font-family: "Monsieur La Doulaise", cursive;
+        font-size: 2.5em;
+        font-weight: 100;
+    }
+
+#countdown-display span {
+    font-size: 2em;
+    /*font-weight: bold;*/
+    margin: 0 5px;
+}
+
+#countdown-message {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin-top: 20px;
+    
+}
+
+.confirmation-form {
+    /*background: #fff;*/
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background-color: rgb(255,255,255,0.05);
+    padding: 2em;
+    max-width: 400px;
+    margin: 0 auto;
+    /*flex: 1;*/
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2rem;
+}
+
+    .confirmation-form h2 {
+        text-align: center;
+        margin-bottom: 1em;
+        font-family: "Monsieur La Doulaise", cursive;
+        font-weight: 100;   
+        letter-spacing: 1px;
+        font-size: 2em;
+        /*color: #6c3483;*/
+    }
+
+    .confirmation-form div {
+        margin-bottom: 1em;
+    }
+
+    .confirmation-form label {
+        display: block;
+        margin-bottom: 0.3em;
+        font-weight: 100;
+        /*color: #333;*/
+        font-family: "DM Serif Text", serif;
+    }
+
+    .confirmation-form input[type="text"],
+    .confirmation-form input[type="tel"],
+    .confirmation-form input[type="email"] {
+        width: 100%;
+        padding: 0.6em;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1em;
+        box-sizing: border-box;
+        transition: border-color 0.2s;
+    }
+
+    .confirmation-form input:focus {
+        border-color: #6c3483;
+        outline: none;
+    }
+
+    .confirmation-form button[type="submit"] {
+        width: 100%;
+        padding: 0.8em;
+        background-color: rgb(142, 161, 187);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        /*font-weight: bold;*/
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+        .confirmation-form button[type="submit"]:hover {
+            background-color: rgb(75, 97, 127);
+        }
+
+
+
+
+
+
+/*
+
+
+
+        ANIMACIONES
+
+
+
+*/
+
+@keyframes FadeBackground {
+    0% {
+        background-size: 100% 100%;
+        opacity: 0.6;
+        
+    }
+    100% {
+        background-size: 115% 105%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes FadeTitle {
+    0% {
+        font-size: 4.1rem;
+        opacity: 0.6;
+    }
+    100% {
+        font-size: 4.5rem;
+        opacity: 1;
+    }
+}
+
+
+@keyframes Fadein {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes FadeTitlePhone {
+    0% {
+        font-size: 3rem;
+        opacity: 0.6;
+    }
+    90% {
+        font-size: 3.45rem;
+        opacity: 0.8;
+    }
+    100% {
+        font-size: 3.5rem;
+        opacity: 1;
+    }
+}
+
+
+@keyframes FadeinPhone {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+@media (max-width: 790px) {
+
+    .header h1 {
+        font-size: 3.5rem;
+        animation: FadeinPhone 3s ease-in-out;
+    }
+
+    .header h2 {
+        font-size: 1.1rem;
+        animation: FadeinPhone 2s ease-in-out;
+    }
+
+    .header h3 {
+        font-size: 0.9rem;
+        animation: FadeinPhone 2s ease-in-out;
+    }
+
+    .header {
+        flex: 1;
+        background-image: url("../img/bg_aqua.jpg");
+        background-repeat: no-repeat;
+        background-size: 110% 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column; /* para apilar el h1 arriba del h2 */
+        justify-content: center; /* centra verticalmente */
+        align-items: center; /* centra horizontalmente */
+        text-align: center; /* centra el texto */
+        height: 100%; /* asegura ocupar todo el alto disponible */
+        /*background: linear-gradient(135deg, #ff8a00, #e52e71);*/
+        color: rgb(149, 134, 119); /* color del texto */
+        padding: 1rem;
+    }
+}

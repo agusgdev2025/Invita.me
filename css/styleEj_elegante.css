@@ -80,7 +80,7 @@ body {
     margin: 0px;
     line-height: 1.5;
     font-family: "Roboto", sans-serif;
-    background-image: url("img/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,7 +117,7 @@ body {
 /* Secciones internas */
 .header {
     flex: 1;
-    background-image: url("img/Fondo1.jpg");
+    background-image: url("../img/bg_elegante.jpg");
     background-repeat: no-repeat;
     background-size: 110% 100%;
     background-position: center;
@@ -413,7 +413,7 @@ body {
 
     .header {
         flex: 1;
-        background-image: url("img/Fondo1.jpg");
+        background-image: url("../img/bg_elegante.jpg");
         background-repeat: no-repeat;
         background-size: 110% 100%;
         background-position: center;

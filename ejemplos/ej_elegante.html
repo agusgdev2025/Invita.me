@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Invita.me</title>
-    <link href="styleEj_elegante.css" rel="stylesheet" />
+    <link href="../css/styleEj_elegante.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ICONOS -->
@@ -30,7 +30,7 @@
 </head>
 <body>
     <header>
-        <a class="_back" href="ejemplos.html"><span class="material-symbols-outlined">arrow_back</span></a>
+        <a class="_back" href="../ejemplos/ejemplos.html"><span class="material-symbols-outlined">arrow_back</span></a>
     </header>
 
     <div class="invitation-wrapper">
@@ -76,43 +76,11 @@
 
                 <form action="sendForm.php" method="post" class="confirmation-form" id="confirmationForm" style="margin-top: 2em;">
                     <h2>Confirmar asistencia</h2>
-                    <!--           <div>
-                <label for="nombreApellido">Nombre y Apellido:</label>
-                <input type="text" id="nombreApellido" name="nombre" required />
-            </div>
-            <div>
-                <label for="telefono">Número de Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required pattern="[0-9+ ]{7,}" />
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-            </div>
-            <div>
-                <label for="email">Asistentes:</label>
-                <input type="text" id="email" name="people" required />
-            </div>
-            <br />-->
+                 
                     <button type="submit">Confirmar</button>
                 </form>
-                <script>
-                    //SUBIR FORMULARIO
-                    document.getElementById('confirmationForm').addEventListener('submit', function (e) {
-                        e.preventDefault();
 
-                        const nombre = document.getElementById('nombreApellido').value;
-                        const telefono = document.getElementById('telefono').value;
-                        const email = document.getElementById('email').value;
-
-                        e.target.submit(); // envía el formulario
-                        document.getElementById('confirmationForm').reset();
-                        window.scrollTo(0, 0);
-                    });
-
-
-                </script>
-
-                <p>Creado con <a href="index.html"><b>Invita.me!</b></a></p><br />
+                <p>Creado con <a href="../index.html"><b>Invita.me!</b></a></p><br />
             </section>
         </div>
     </div>
