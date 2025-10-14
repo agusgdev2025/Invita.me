@@ -390,6 +390,15 @@ body {
     }
 }
 
+@keyframes EaseinPhone {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 
 
@@ -412,19 +421,6 @@ body {
     }
 
     .header {
-        flex: 1;
-        background-image: url("../img/bg_aqua.jpg");
-        background-repeat: no-repeat;
-        background-size: 110% 100%;
-        background-position: center;
-        display: flex;
-        flex-direction: column; /* para apilar el h1 arriba del h2 */
-        justify-content: center; /* centra verticalmente */
-        align-items: center; /* centra horizontalmente */
-        text-align: center; /* centra el texto */
-        height: 100%; /* asegura ocupar todo el alto disponible */
-        /*background: linear-gradient(135deg, #ff8a00, #e52e71);*/
-        color: rgb(149, 134, 119); /* color del texto */
-        padding: 1rem;
+        animation: EaseinPhone 1s ease-out;
     }
 }
