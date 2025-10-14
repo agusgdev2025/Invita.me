@@ -384,7 +384,7 @@ body {
 
     .header h1 {
         font-size: 3.5rem;
-        animation: FadeTitlePhone 3s ease-in-out;
+        animation: FadeinPhone 3s ease-in-out;
     }
     .header h2 {
         font-size: 1.1rem;
