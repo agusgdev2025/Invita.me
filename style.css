@@ -246,9 +246,11 @@ p {
     display: flex;
     justify-content: center;
     margin-bottom: 20vh;
-    background-color: aliceblue;
-    font-family: "DM Serif Text", serif;
+    /*background-color: rgba(255, 255, 255, 0.4);*/
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
     flex-direction: column;
+    /*text-transform: uppercase;*/
     align-items: center;
 }
     .example_image_txt p {
@@ -256,7 +258,8 @@ p {
         font-size: 1.5rem;
         width: 100%;
         text-align: center;
-        color: black;
+        color: white;
+        text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
     }
         /*
 
