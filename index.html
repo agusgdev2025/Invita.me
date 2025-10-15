@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Text:ital@0;1&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_up" />
+
 </head>
 <body>
     <!--MOVILES-->
@@ -68,6 +70,30 @@
     <div class="example_image_txt">
         <p>¡Elige tu estilo favorito! Arma tu propio diseño personalizado.</p>
     </div>
+    <div class="button_up">
+        <a href="#top"><span class="material-symbols-outlined">keyboard_arrow_up</span></a>
+    </div>
+    <script>
+        // Pseudocódigo:
+        // 1. Detectar el evento de scroll en la ventana.
+        // 2. Si el usuario ha scrolleado más de 300px, mostrar el div .button_up con display:flex.
+        // 3. Si el usuario está por encima de 300px, ocultar el div .button_up con display:none.
+
+        window.addEventListener('scroll', function () {
+            const buttonUp = document.querySelector('.button_up');
+            if (window.scrollY > 300) {
+                buttonUp.style.display = 'flex';
+            } else {
+                buttonUp.style.display = 'none';
+            }
+        });
+
+        // Inicialmente ocultar el botón al cargar la página
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttonUp = document.querySelector('.button_up');
+            buttonUp.style.display = 'none';
+        });
+    </script>
     <div class="bottom">
         <p>Creado por: <a>@atusdev</a>, 2025</p>
     </div>
